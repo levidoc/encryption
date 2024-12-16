@@ -11,8 +11,8 @@ BUILD: VERIFIED
 class encryption_services{
     public $encryption_keys; 
 
-    public function __construct() {
-        $this->encryption_keys = ['threading'=>'CECECECECEDEFEGEFERHFGHHRHGHRHGHRJGJRJR','standard'=>'CECECECECEDEFEGEFERHFGHHRHGHRHGHRJGJRJR']; 
+    public function __construct($token_key) {
+        $this->encryption_keys = ['threading'=>$token_key]; 
     }
     
     public function data_hash($input){
