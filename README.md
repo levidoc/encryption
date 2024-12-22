@@ -19,6 +19,7 @@ Index data is the output guide of which hash combination results. This helps rev
 # Disclaimer
 This encryption script is safer than using plaintext data, I Wont say its perfect but it gets the job done.
 Its not 100% secure, (not because the encryption scripts is public). but because there is never anything 100% secure especially if you can reverse the encryption.  
+This version of the encryption threading is only compatible with sha256, other hashing algorithms are not yet compatible with the decryption process. 
 
 # Example 
 locate the example.php to preview the encryption services 
@@ -27,10 +28,17 @@ locate the example.php to preview the encryption services
 <?php 
 include_once "bin/services.php"; #Include The Encryption Service Classes
 
-$e = new encryption_services('_AUTH_TOKEN_'); 
-$enc_data = $e->encryption_threading('Hello World'); 
-$output = $e->decryption_threading_1($enc_data); 
+$e = new encryption_services('_AUTH_TOKEN_');
+#Declare The Encryption Class
+
+$enc_data = $e->encryption_threading('Hello World');
+#This is the encryption procedure for the encryption threading
+
+$output = $e->decryption_threading_1($enc_data);
+#This is the decryption procedure for the encryption threading
+
 echo $output; 
 
 ?>
 ```
+# 
