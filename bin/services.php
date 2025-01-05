@@ -302,4 +302,14 @@ class encryption_services
         return $encryption; 
 
     }
+
+
+    function get_algorithms(){
+        $output = [
+            'rays_encryption'
+                    =>[
+                'encode'=>'rays_encryption'],
+                'decode'=>'rays_decryption'],
+        ]
+    }
 }
