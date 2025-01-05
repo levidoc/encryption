@@ -310,6 +310,8 @@ class encryption_services
                     =>[
                 'encode'=>'rays_encryption'],
                 'decode'=>'rays_decryption'],
-        ]
+        ]; 
+
+        return $output; 
     }
 }
